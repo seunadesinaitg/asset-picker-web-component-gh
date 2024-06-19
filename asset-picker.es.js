@@ -31708,7 +31708,7 @@ function uW({
     removeAppParameters: (J) => {
       v((be) => sW(be, J));
     },
-    hostname: oW[`${m?.toUpperCase()}`] ?? ""
+    hostname: m ? oW[`${m.toUpperCase()}`] : ""
   }, P = M.Children.map(i, (J) => M.isValidElement(J) ? M.cloneElement(J, $) : J);
   return /* @__PURE__ */ D.jsx(iO.Provider, { value: $, children: P });
 }
@@ -31729,7 +31729,7 @@ const dW = () => {
   i && document.body.removeChild(i);
 }, hW = () => {
   M.useEffect(() => (dW(), () => pW()), []);
-}, vW = (i) => (hW(), /* @__PURE__ */ D.jsx(iL, { children: /* @__PURE__ */ D.jsx(uW, { ...i, children: /* @__PURE__ */ D.jsx(fW, { children: /* @__PURE__ */ D.jsx(lL, { children: /* @__PURE__ */ D.jsx(r3, { path: "/", Component: iW }) }) }) }) }));
+}, vW = (i) => (hW(), console.log({ customProps: i }), /* @__PURE__ */ D.jsx(iL, { children: /* @__PURE__ */ D.jsx(uW, { ...i, children: /* @__PURE__ */ D.jsx(fW, { children: /* @__PURE__ */ D.jsx(lL, { children: /* @__PURE__ */ D.jsx(r3, { path: "/", Component: iW }) }) }) }) }));
 var fS, mW = {}, v0 = dS;
 if (mW.NODE_ENV === "production")
   fS = v0.createRoot, v0.hydrateRoot;
