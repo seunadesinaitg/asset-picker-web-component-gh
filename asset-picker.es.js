@@ -29688,7 +29688,7 @@ function BS({ message: i, className: s, children: u }) {
   ] });
 }
 function yO(i) {
-  window.parent.postMessage(JSON.stringify(i), "*");
+  console.log({ message: i }), window.parent.postMessage(JSON.stringify(i), "*");
 }
 function hU() {
   console.log("closing CMP asset picker."), yO({ action: "cmp-assetpicker-close" });
